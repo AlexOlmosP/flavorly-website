@@ -31,7 +31,9 @@ header{position:sticky;top:0;z-index:20;background:rgba(250,245,238,.9);backdrop
 h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(2.3rem,4.6vw,3.5rem);line-height:1.06;letter-spacing:-.02em;max-width:15ch}
 h1 em{font-style:italic;font-weight:400;color:var(--clay-deep);line-height:1.1;display:inline-block;padding-bottom:.06em}
 .sub{margin-top:22px;font-size:1.15rem;color:var(--ink-soft);max-width:30rem}
-.badge{display:inline-flex;align-items:center;gap:10px;margin-top:34px;padding:13px 24px;border-radius:999px;font-weight:700;font-size:.98rem;background:var(--clay);color:var(--on-clay);box-shadow:0 10px 26px rgba(194,65,12,.28)}
+.badge{display:inline-flex;align-items:center;gap:10px;margin-top:34px;padding:13px 24px;border-radius:999px;font-weight:700;font-size:.98rem;background:var(--clay);color:var(--on-clay);box-shadow:0 10px 26px rgba(194,65,12,.28);text-decoration:none;transition:transform .2s var(--ease),background .2s var(--ease)}
+a.badge:hover{background:var(--clay-deep)}
+a.badge:active{transform:translateY(1px) scale(.98)}
 .badge svg{flex:none}
 .hero-art{position:relative;display:flex;justify-content:center}
 .hero-art::before{content:"";position:absolute;inset:8% -4% -6% 10%;background:var(--clay-tint);border-radius:44% 56% 52% 48%/54% 46% 54% 46%;z-index:0}
