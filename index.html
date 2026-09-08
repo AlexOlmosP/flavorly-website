@@ -75,4 +75,18 @@
 <div>Flavorly &middot; <a href="mailto:pipapetzolmos@gmail.com">pipapetzolmos@gmail.com</a></div>
 <nav class="foot-links" aria-label="Legal"><a href="/support">Support</a><a href="/privacy">Privacy Policy</a><a href="/terms">Terms of Use</a></nav>
 </div></footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+document.querySelectorAll('a[href^="mailto:"]').forEach(function(a){
+  a.addEventListener('click',function(){
+    if(!navigator.clipboard)return;
+    navigator.clipboard.writeText('pipapetzolmos@gmail.com').then(function(){
+      var t=document.getElementById('toast');
+      t.textContent='Address copied: pipapetzolmos@gmail.com';
+      t.classList.add('show');
+      clearTimeout(t._h);t._h=setTimeout(function(){t.classList.remove('show')},3200);
+    }).catch(function(){});
+  });
+});
+</script>
 </body></html>

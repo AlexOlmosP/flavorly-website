@@ -42,4 +42,18 @@
 <p>Email us the recipe name, the step or ingredient, and what looks wrong. We verify against the source cookbook and fix it in a content update. No app update needed on your side.</p></div>
 </main>
 <footer><div class="wrap foot"><div>Flavorly</div><nav class="foot-links"><a href="/support">Support</a><a href="/privacy">Privacy Policy</a><a href="/terms">Terms of Use</a></nav></div></footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+document.querySelectorAll('a[href^="mailto:"]').forEach(function(a){
+  a.addEventListener('click',function(){
+    if(!navigator.clipboard)return;
+    navigator.clipboard.writeText('pipapetzolmos@gmail.com').then(function(){
+      var t=document.getElementById('toast');
+      t.textContent='Address copied: pipapetzolmos@gmail.com';
+      t.classList.add('show');
+      clearTimeout(t._h);t._h=setTimeout(function(){t.classList.remove('show')},3200);
+    }).catch(function(){});
+  });
+});
+</script>
 </body></html>
